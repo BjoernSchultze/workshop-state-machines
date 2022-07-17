@@ -1,19 +1,22 @@
 # Workshop: Knowing your State Machines
 
 The *symfony* branch uses the Workflow component.
+ 
 
 ## Run
 
-Install with
+### Install with
 ```
-composer install
-bin/console doctrine:database:create
-bin/console doctrine:schema:update --force
+docker-compose up -d
+docker exec php composer install
+docker exec php bin/console doctrine:database:create
+docker exec php bin/console doctrine:schema:update --force
 ```
 
 Make sure your database DSN is correct in `.env`. (Override them if you like by creating `.env.local`)
 
 ### Notes
+Bash into the container or put `docker exec php` before each command like in the install with section.
 
 **This "Notes" section is just an FYI. Start with Exercise 1 now.**
 
